@@ -125,26 +125,68 @@ const programmers = [
 
 //Escribe tu código aquí
 
+for (let index in programmers) {
+  //puedo poner también for(let programmer in programmers) {
+  const programmer = programmers[index];
+  console.log(
+    `${index}: ${programmer.name} ${programmer.lastname}, su aporte fue ${programmer.knowledge}`
+  );
+}
+
 //Ejercicio 11: Con un bucle for of imprime en consola "Hola, mi nombre es ... " y reemplaza los tres puntos con cada nombre del array dado.
 
 const names = ["Rocío", "Lola", "Antía", "Laura", "Noelia"];
 
 //Escribe tu código aquí
 
+for (const name of names) {
+  console.log(`Hola, mi nombre es ${name}`);
+}
+
 //Ejercicio 12: Con un bucle while imprime en consola una lista del 1 al 5.
 
 //Escribe tu código aquí
 
+let index = 1;
+
+while (index <= 5) {
+  console.log(index);
+  index++;
+}
+
 //Ejercicio 13: Realiza el mismo ejercicio anterior pero con un bucle do while.
 
 //Escribe tu código aquí
+
+let doWhileIndex = 1;
+
+do {
+  console.log(doWhileIndex);
+  doWhileIndex++;
+} while (doWhileIndex <= 5);
 
 //Ejercicio 14: Saludo Personalizado
 //Crea una función llamada saludar que tome un parámetro llamado nombre y devuelva un saludo personalizado. Luego, llama a la función con diferentes nombres y muestra el resultado en la consola.
 
 //Escribe tu código aquí
 
+function saludar(nombre) {
+  console.log(`¡Hola, ${nombre}!`);
+}
+
+saludar("Dani");
+saludar("Tecla");
+saludar("Sandra");
+
 //Ejercicio 15: Calcular el Área de un Rectángulo
+
 //Crea una función llamada calcularAreaRectangulo que tome dos parámetros (ancho y alto) y devuelva el área del rectángulo. Luego, llama a la función con diferentes valores de ancho y alto y muestra el resultado en la consola.
 
 //Escribe tu código aquí
+
+function calcularAreaRectangulo(ancho, alto) {
+  const area = ancho * alto;
+  console.log(`El area de este rectángulo es ${area}`);
+}
+
+calcularAreaRectangulo(4, 8);
